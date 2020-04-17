@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Responsive Navigation Bar - W3jar.Com</title>
+<link href="bookCss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <nav id="navbar" class="">
+        <div class="nav-wrapper">
+          <!-- Navbar Logo -->
+          <div class="logo">
+            <!-- Logo Placeholder for Inlustration -->
+            <a href="#home"> Smith's<i class="fas fa-chess-knight"></i> </a>
+          </div>
+      
+          <!-- Navbar Links -->
+          <ul id="menu">
+          <li><a href="homePage.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book.html">Book For Event</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>   
+          </ul>
+        </div>
+      </nav>
+      
+      
+      <!-- Menu Icon -->
+      <div class="menuIcon">
+        <span class="icon icon-bars"></span>
+        <span class="icon icon-bars overlay"></span>
+      </div>
+      
+      
+      <div class="overlay-menu">
+        <ul id="menu">
+            <li><a href="homePage.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="book.html">Book For Event</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>   
+          </ul>
+      </div>
+      <br></br>
+      <br></br>
+
+      <div class="container">
+        <div class="imgBx">
+          <div class="bg-image"></div>
+
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 10</div>
+              <img src="book (1).jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 10</div>
+              <img src="book (2).jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 /10</div>
+              <img src="book (3).jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 10</div>
+              <img src="book (4).jpg" style="width:100%">
+            </div>
+                        
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 10</div>
+              <img src="book (5).jpg" style="width:100%">
+            </div>
+                        
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 10</div>
+              <img src="book (6).jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext"> 7 / 10</div>
+              <img src="book (7).jpg" style="width:100%">
+            </div>
+                        
+            <div class="mySlides fade">
+              <div class="numbertext">8 / 10</div>
+              <img src="book (8).jpg" style="width:100%">
+            </div>
+                        
+            <div class="mySlides fade">
+              <div class="numbertext">9 / 10</div>
+              <img src="book (9).jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">10 / 10</div>
+              <img src="book(10).jpg" style="width:100%">
+            </div>
+            <br>
+                 <div style="text-align:center">
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                         <span class="dot"></span> 
+                 </div>      
+            </div>
+            
+        </div>
+        <div class="details">
+              <div class="content">
+                <h2>Book Us </h2>
+                <div class="border"></div>
+              
+                <p>
+                  We offer full-service catering for any event, 
+                  large or small. We understand your needs and we 
+                  will cater the food to satisfy the biggerst criteria
+                   of them all, both look and taste. Do not hesitate to contact us for:
+               </p>
+               <ul>
+                 <li>Weddings</li>
+                 <li>Birthdays Parties</li>
+                 <li>Social Gatherings</li>
+                 <li>Corprate Events</li>                
+               </ul>
+               <br>
+               <form action="/action_page.php">
+                <input type="text" id="fname" name="fname" placeholder="Full Name"><br>  <br>              
+                <input type="text" id="lname" name="lname" placeholder="Phone Numbers"><br><br>
+                <input type="submit" value="Submit">
+              </form> 
+              </div>
+        </div>
+      </div> 
+      
+     <script>
+        let menuIcon = document.querySelector('.menuIcon');
+let nav = document.querySelector('.overlay-menu');
+
+menuIcon.addEventListener('click', () => {
+if (nav.style.transform != 'translateX(0%)') {
+nav.style.transform = 'translateX(0%)';
+nav.style.transition = 'transform 0.2s ease-out';
+} else { 
+nav.style.transform = 'translateX(-100%)';
+nav.style.transition = 'transform 0.2s ease-out';
+}
+});
+
+
+// Toggle Menu Icon ========================================
+let toggleIcon = document.querySelector('.menuIcon');
+
+toggleIcon.addEventListener('click', () => {
+if (toggleIcon.className != 'menuIcon toggle') {
+toggleIcon.className += ' toggle';
+} else {
+toggleIcon.className = 'menuIcon';
+}
+});
+var slideIndex = 0;
+ showSlides();
+ 
+ function showSlides() {
+   var i;
+   var slides = document.getElementsByClassName("mySlides");
+   var dots = document.getElementsByClassName("dot");
+   for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+   }
+   slideIndex++;
+   if (slideIndex > slides.length) {slideIndex = 1}    
+   for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";  
+   dots[slideIndex-1].className += " active";
+   setTimeout(showSlides, 2500); // Change image every 2 seconds
+ }
+</script>
+
+</body>
+</html>

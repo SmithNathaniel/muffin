@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Responsive Navigation Bar - W3jar.Com</title>
+<link href="contactCSS.css" rel="stylesheet" type="text/css" >
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <nav id="navbar" class="">
+        <div class="nav-wrapper">
+          <!-- Navbar Logo -->
+          <div class="logo">
+            <!-- Logo Placeholder for Inlustration -->
+            <a href="#home"> Smith's</a>
+          </div>
+      
+          <!-- Navbar Links -->
+          <ul id="menu">
+          <li><a href="homePage.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book.html">Book For Event</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>   
+          </ul>
+        </div>
+      </nav>
+      
+      
+      <!-- Menu Icon -->
+      <div class="menuIcon">
+        <span class="icon icon-bars"></span>
+        <span class="icon icon-bars overlay"></span>
+      </div>
+      
+      
+      <div class="overlay-menu">
+        <ul id="menu">
+            <li><a href="homePage.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="book.html">Book For Event</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>   
+          </ul>
+      </div>
+      <br></br>
+      <br></br>
+
+      <div class="container">
+        <div class="imgBx">
+                                                                                                                                                                                          
+          <!-- Height=450px; Width=600px -->
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="500" height="450" frameborder="0" style="border: 4px solid white; "></iframe>                                                                                 
+                                                                                                                                                                                                                                                
+            
+        </div>
+        <div class="details">
+              <div class="content">
+                <h2>Contact  Us </h2>
+                <div class="border"></div>
+                <a href="tel:080-090-0110" class="tm-contact-link">
+                  <i class="fas fa-phone tm-contact-icon"></i>080-090-0110
+                </a>
+                <a href="mailto:info@company.co" class="tm-contact-link">
+                  <i class="fas fa-envelope tm-contact-icon"></i>info@company.co
+                </a>            
+                <a class="tm-contact-link"><i class="fas fa-map-marker tm-contact-icon" style="font-size:20px;"></i>
+                  180 Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus 10550</a> 
+                    
+                    <a href="#" class="fa fa-facebook"></a>
+                     <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-instagram"></a>                                                                                                                                         <br>
+                    <form class="contact-form" action="index.html" method="post">
+                      <input type="text" class="contact-form-text" placeholder="Your name">
+                      <input type="email" class="contact-form-text" placeholder="Your email">
+                      <textarea class="contact-form-text" placeholder="Your message"></textarea>
+                      <input type="submit" class="contact-form-btn" value="Send">
+                    </form>
+                                         </div>
+        </div>
+      </div> 
+      
+     <script>
+        let menuIcon = document.querySelector('.menuIcon');
+let nav = document.querySelector('.overlay-menu');
+
+menuIcon.addEventListener('click', () => {
+if (nav.style.transform != 'translateX(0%)') {
+nav.style.transform = 'translateX(0%)';
+nav.style.transition = 'transform 0.2s ease-out';
+} else { 
+nav.style.transform = 'translateX(-100%)';
+nav.style.transition = 'transform 0.2s ease-out';
+}
+});
+
+
+// Toggle Menu Icon ========================================
+let toggleIcon = document.querySelector('.menuIcon');
+
+toggleIcon.addEventListener('click', () => {
+if (toggleIcon.className != 'menuIcon toggle') {
+toggleIcon.className += ' toggle';
+} else {
+toggleIcon.className = 'menuIcon';
+}
+});
+var slideIndex = 0;
+ showSlides();
+ 
+ function showSlides() {
+   var i;
+   var slides = document.getElementsByClassName("mySlides");
+   var dots = document.getElementsByClassName("dot");
+   for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+   }
+   slideIndex++;
+   if (slideIndex > slides.length) {slideIndex = 1}    
+   for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";  
+   dots[slideIndex-1].className += " active";
+   setTimeout(showSlides, 2500); // Change image every 2 seconds
+ }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Responsive Navigation Bar - W3jar.Com</title>
+<link href="aboutCss.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+</head>
+<body>
+<header>
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+      <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Inlustration -->
+        <a href="#home"> Smith's </a>
+      </div>
+  
+      <!-- Navbar Links -->
+      <ul id="menu">
+     <li><a href="homePage.html">Home</a></li>
+       <li><a href="menu.html">Menu</a></li>
+       <li><a href="book.html">Book For Event</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="contact.html">Contact</a></li>   
+      </ul>
+    </div>
+  </nav>
+  
+  
+  <!-- Menu Icon -->
+  <div class="menuIcon">
+    <span class="icon icon-bars"></span>
+    <span class="icon icon-bars overlay"></span>
+  </div>
+  
+  
+  <div class="overlay-menu">
+    <ul id="menu">
+      <li><a href="homePage.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="book.html">Book For Event</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>   
+      </ul>
+  </div>
+</header>  
+  <br></br>
+  <br></br>
+<div class="aboutPhoto">
+	<!-- DONT REMOVE THIS P -->
+		<p> </p>
+	</div>
+  
+  <div class="about">
+		<h2 style="font-size: 35px;">About Us</h2>
+        <p><span>Smith's</span>  home improvements and Maintenance is a construction copmany composed
+        of specialist individuals in respective fields of construction. We peovide a consistently high
+         standard of work by ensuring every project is given complete care and attention to detail. We also 
+        take on all sizes of work from small general building to complete refurbishment and renovations. 
+        </p>
+        <h2 style="font-size: 35px;">Mission</h2>
+        <p>home improvements and Maintenance is a construction copmany composed
+        of specialist individuals in respective fields of construction. We peovide a consistently high
+        take on all sizes of work from small general building to complete refurbishment and renovations. 
+
+        
+                </p>
+                    			</div>
+                          <a href="#">Our Team</a>
+                          <div class="border"></div>
+
+      <div class="content">     
+        <div class="wrapper">     
+         <div class="our_team">
+         
+             <div class="team_member">
+                <div class="member_img">
+                  <img src="person(4).jpg" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
+               </div>
+               <h3>barbara mori</h3>
+               <span>Baker/Pastery Chef</span>
+               <p>From the beginning shooting and changing littler than common accounts for assignments, she began looking for after endeavors outside of school.</p>
+           </div>
+           
+             <div class="team_member">
+                <div class="member_img">
+                  <img src="person (2).jpg" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
+               </div>
+               <h3>harry dickens</h3>
+               <span>Baker/Pastery Chef </span>
+               <p>He is prodded by his enthusiasm to learn and create and is fiery about helping others. During the time he's been exhibited to different people.</p>
+           </div>
+             <div class="team_member">
+                <div class="member_img">
+                  <img src="person (3).jpg" alt="our_team">
+                  <div class="social_media">
+                    <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                    <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                    <div class="instagram item"><i class="fab fa-instagram"></i></div>
+                  </div>
+               </div>
+               <h3>sammy louise</h3>
+               <span>Mixologist/Baker</span>
+               <p>He is prodded by his enthusiasm to learn and create and is fiery about helping others. During the time he's been exhibited to different people.</p>
+           </div> 
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         </div>
+     </div>
+     </div>
+              <script>
+        let menuIcon = document.querySelector('.menuIcon');
+let nav = document.querySelector('.overlay-menu');
+
+menuIcon.addEventListener('click', () => {
+if (nav.style.transform != 'translateX(0%)') {
+nav.style.transform = 'translateX(0%)';
+nav.style.transition = 'transform 0.2s ease-out';
+} else { 
+nav.style.transform = 'translateX(-100%)';
+nav.style.transition = 'transform 0.2s ease-out';
+}
+});
+
+
+// Toggle Menu Icon ========================================
+let toggleIcon = document.querySelector('.menuIcon');
+
+toggleIcon.addEventListener('click', () => {
+if (toggleIcon.className != 'menuIcon toggle') {
+toggleIcon.className += ' toggle';
+} else {
+toggleIcon.className = 'menuIcon';
+}
+});
+</script>
+</body>
+</html>
